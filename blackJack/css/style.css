@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: darkgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h1{
+    color: darkgoldenrod;
+    margin-bottom: 20px;
+}
+
+button{
+    background: darkgoldenrod;
+    color: darkgreen;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+div{
+    display: flex;
+    gap: 15px;
+}
+
+
+
+#message-el{
+    font-style: italic;
+}

@@ -6,12 +6,24 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
   </head>
-  <body onload="vitoria()">
-    <span id="card1"></span>
-    <span id="card2"></span><br />
-    <span id="sum"></span>
-    <span id="vitoria"></span>
-    <span id="derrota"></span>
+  <body>
+    <main>
+      <h1>BlackJack</h1>
+      <p id="message-el">Want to play a round?</p>
+      <button id="button-btn" onclick="vitoria()">Start Game</button>
+      <div id="game">
+        <p>Cards:</p>
+        <span id="card1"></span>
+        <span>|</span>
+        <span id="card2"></span><br />
+        <div id="board">
+          <span>Sum:</span>
+          <span id="sum"></span>
+        </div>
+      </div>
+
+      <span id="vitoria"></span>
+    </main>
     <script src="js/index.js"></script>
   </body>
 </html>

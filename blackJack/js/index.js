@@ -9,18 +9,19 @@ document.getElementById("card2").innerText = secondCard;
 let hasBlackJack = false;
 let isAlive = true;
 let sum = document.getElementById("sum");
+let startGame = document.getElementById("game");
+let messageEl = document.getElementById("message-el");
+
+startGame.style.display = "none";
+
 sum.innerText = results;
 
 function vitoria() {
-  if (results == 21) {
-    alert("BLACKJACK");
-    document.getElementById("vitoria").innerText =
-      "PARABÉNS VOCÊ VENCEU A MESA DE BLACKJACK!!!! CONSEGUIU OS " + results;
-  } else {
-    alert("Derrota");
-    document.getElementById("derrota").innerText =
-      "Você conseguiu " + results + " o resultado dependera da mesa";
-  }
+  startGame.style.display = "flex";
+  let buttonStart = document.getElementById("button-btn");
+
+  messageEl.innerText = "Want another Card?";
+  blackJack();
 }
 
 if (results < 21) {
@@ -32,6 +33,21 @@ if (results < 21) {
   console.log("you're out of the game");
   isAlive = false;
 }
+
+function blackJack() {
+  if (results == 21) {
+    alert("BLACKJACK");
+    document.getElementById("vitoria").innerText =
+      "sum: PARABÉNS VOCÊ VENCEU A MESA DE BLACKJACK!!!! CONSEGUIU OS " +
+      results;
+  } else {
+    alert("Derrota");
+    document.getElementById("vitoria").innerText =
+      "sum: Você conseguiu " + results + " o resultado dependera da mesa";
+  }
+}
+
+function anotherCard() {}
 
 console.log(hasBlackJack);
 console.log(isAlive);
