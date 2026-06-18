@@ -37,6 +37,10 @@ div{
     gap: 15px;
 }
 
+.buttons{
+    flex-direction: column;
+    gap: 5px;
+}
 
 
 #message-el{

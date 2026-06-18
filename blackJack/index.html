@@ -10,19 +10,25 @@
     <main>
       <h1>BlackJack</h1>
       <p id="message-el">Want to play a round?</p>
-      <button id="button-btn" onclick="vitoria()">Start Game</button>
+      Game</button>
       <div id="game">
         <p>Cards:</p>
         <span id="card1"></span>
-        <span>|</span>
+        <span>+</span>
         <span id="card2"></span><br />
+        <span></span>
         <div id="board">
           <span>Sum:</span>
           <span id="sum"></span>
         </div>
+        
       </div>
 
       <span id="vitoria"></span>
+      <div class="buttons">
+        <button id="nova-carta" onclick="anotherCard()">New Game</button>
+        <button id="button-btn" onclick="vitoria()">Start
+      </div> 
     </main>
     <script src="js/index.js"></script>
   </body>
