@@ -37,6 +37,10 @@ div{
     gap: 15px;
 }
 
+#game{
+    flex-direction: column;
+}
+
 .buttons{
     flex-direction: column;
     gap: 5px;

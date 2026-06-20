@@ -1,52 +1,87 @@
 const max = 11;
 const min = 2;
-const firstCard = Math.floor(Math.random() * (max - min + 1)) + min;
-const secondCard = Math.floor(Math.random() * (max - min + 1)) + min;
-let results = firstCard + secondCard;
-document.getElementById("card1").innerText = firstCard;
-document.getElementById("card2").innerText = secondCard;
-let oneMoreCard = false;
+
+let firstCard;
+let secondCard;
+let results;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
+let cards = [];
+
 let sum = document.getElementById("sum");
 let startGame = document.getElementById("game");
 let messageEl = document.getElementById("message-el");
 let newCard = document.getElementById("nova-carta");
+let cardsEl = document.getElementById("cardsEl");
 
 startGame.style.display = "none";
 newCard.style.display = "none";
-sum.innerText = results;
 
-function vitoria() {
-  startGame.style.display = "flex";
-  newCard.style.display = "flex";
-  let buttonStart = document.getElementById("button-btn");
+function getRandomCard() {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-  messageEl.innerText = "Want another Card?";
-  blackJack();
+function renderCards() {
+  cardsEl.textContent = "Cards: ";
+
+  for (let i = 0; i < cards.length; i++) {
+    cardsEl.textContent += cards[i] + " ";
+  }
 }
 
 function blackJack() {
   if (results < 21) {
-    messageEl.textContent = "do you want to draw another card?";
+    messageEl.textContent = "Do you want to draw another card?";
   } else if (results === 21) {
-    messageEl.textContent = "BlackJack ganhador, ganhador, galinha pro jantar";
+    messageEl.textContent =
+      "BlackJack! Ganhador, ganhador, galinha pro jantar!";
     hasBlackJack = true;
   } else {
-    messageEl.textContent = "you're out of the game";
+    messageEl.textContent = "You're out of the game!";
     isAlive = false;
   }
 }
 
-function anotherCard() {
-  let oneMoreCard = true;
-  const thirdCard = Math.floor(Math.random() * (max - min + 1)) + min;
-  results += thirdCard;
-  sum.innerText = results;
-  console.log(results);
+function vitoria() {
+  // Reinicia o jogo
+  hasBlackJack = false;
+  isAlive = true;
 
+  firstCard = getRandomCard();
+  secondCard = getRandomCard();
+
+  cards = [firstCard, secondCard];
+  results = firstCard + secondCard;
+
+  startGame.style.display = "flex";
+  newCard.style.display = "flex";
+
+  sum.textContent = results;
+
+  renderCards();
   blackJack();
+
+  console.log("Novo jogo iniciado");
+  console.log(cards);
 }
 
-console.log(hasBlackJack);
-console.log(isAlive);
+function anotherCard() {
+  // Impede comprar carta após vitória ou derrota
+  if (!isAlive || hasBlackJack) {
+    return;
+  }
+
+  const newRandomCard = getRandomCard();
+
+  cards.push(newRandomCard);
+  results += newRandomCard;
+
+  sum.textContent = results;
+
+  renderCards();
+  blackJack();
+
+  console.log("Nova carta:", newRandomCard);
+  console.log("Cartas:", cards);
+  console.log("Soma:", results);
+}
