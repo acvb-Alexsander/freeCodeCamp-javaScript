@@ -13,6 +13,11 @@ let startGame = document.getElementById("game");
 let messageEl = document.getElementById("message-el");
 let newCard = document.getElementById("nova-carta");
 let cardsEl = document.getElementById("cardsEl");
+let player = {
+  name:"Per",
+  chips:145
+}
+let playerEl = document.getElementById("player-el")=playerEl.textContent= player.name+ " : $" + player.chips
 
 startGame.style.display = "none";
 newCard.style.display = "none";
