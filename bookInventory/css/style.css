@@ -1,0 +1,199 @@
+/* =========================
+   Tema base
+   ========================= */
+
+:root {
+  --color-page-bg: #f6f3ea;
+  --color-table-bg: #fff8e7;
+  --color-row-bg: papayawhip;
+  --color-row-bg-soft: #fff3d4;
+
+  --color-text: #1f2933;
+  --color-muted: #5f6b7a;
+
+  --color-status-bg: #0f766e;
+  --color-status-text: #ffffff;
+  --color-status-border: #dc2626;
+
+  --color-dot-empty: #d1d5db;
+  --color-dot-filled: gold;
+  --color-dot-border: #111827;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   Layout geral da tabela
+   ========================= */
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, var(--color-page-bg), #ffffff);
+  color: var(--color-text);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  background-color: var(--color-table-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+caption,
+h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+th,
+td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+th {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* =========================
+   Linhas por status
+   ========================= */
+
+tr[class="read"],
+tr[class="to-read"],
+tr[class="in-progress"] {
+  background-image: linear-gradient(
+    135deg,
+    var(--color-row-bg),
+    var(--color-row-bg-soft)
+  );
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+tr[class="read"]:hover,
+tr[class="to-read"]:hover,
+tr[class="in-progress"]:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 4px 0 0 rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   Spans base
+   ========================= */
+
+span {
+  display: inline-block;
+}
+
+/* =========================
+   Status visual
+   ========================= */
+
+tr[class="to-read"] span[class="status"],
+tr[class="read"] span[class="status"],
+tr[class="in-progress"] span[class="status"] {
+  border: 3px solid var(--color-status-border);
+  border-radius: var(--radius-sm);
+  background-image: linear-gradient(
+    135deg,
+    var(--color-status-bg),
+    #064e3b
+  );
+  color: var(--color-status-text);
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Cores levemente diferentes por tipo de status */
+
+tr[class="read"] span[class="status"] {
+  --color-status-bg: #15803d;
+}
+
+tr[class="to-read"] span[class="status"] {
+  --color-status-bg: #0369a1;
+}
+
+tr[class="in-progress"] span[class="status"] {
+  --color-status-bg: #b45309;
+}
+
+/* =========================
+   Status e rating
+   ========================= */
+
+span[class="status"],
+span[class^="rate"] {
+  min-height: 1em;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Bolinhas de avaliação
+   ========================= */
+
+span[class^="rate"] {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+span[class^="rate"] > span {
+  width: 0.85rem;
+  height: 0.85rem;
+  border: 3px solid var(--color-dot-border);
+  border-radius: 999px;
+  background-color: var(--color-dot-empty);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background-image 0.2s ease;
+}
+
+span[class^="rate"] > span:hover {
+  transform: scale(1.15);
+}
+
+/* =========================
+   Avaliações preenchidas
+   ========================= */
+
+span[class~="one"] span:first-child {
+  background-image: linear-gradient(
+    135deg,
+    var(--color-dot-filled),
+    #f59e0b
+  );
+}
+
+span[class~="two"] span:nth-child(-n + 2) {
+  background-image: linear-gradient(
+    135deg,
+    var(--color-dot-filled),
+    #f59e0b
+  );
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(
+    135deg,
+    var(--color-dot-filled),
+    #f59e0b
+  );
+}
