@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
   </head>
@@ -21,12 +26,38 @@
         <option value=""></option>
         <option value=""></option>
       </select>
-      <input type="radio" />
-      <input type="radio" />
-      <input type="checkbox" name="" id="" />
-      <input type="checkbox" name="" id="" />
-      <textarea name="" id=""></textarea>
-      <button type="submit"></button>
+      <label>Experience Level</label>
+
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="level" value="junior" />
+          Junior
+        </label>
+
+        <label>
+          <input type="radio" name="level" value="senior" />
+          Senior
+        </label>
+      </div>
+
+      <label>Technologies</label>
+
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" value="html" />
+          HTML
+        </label>
+
+        <label>
+          <input type="checkbox" value="css" />
+          CSS
+        </label>
+      </div>
+
+      <label>Comments</label>
+      <textarea placeholder="Tell us more about yourself"></textarea>
+
+      <button type="submit">Submit Survey</button>
     </form>
   </body>
 </html>
