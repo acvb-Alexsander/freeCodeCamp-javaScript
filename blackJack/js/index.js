@@ -14,14 +14,14 @@ let messageEl = document.getElementById("message-el");
 let newCard = document.getElementById("nova-carta");
 let cardsEl = document.getElementById("cardsEl");
 let player = {
-  name:"Per",
-  chips:145
-}
-let playerEl = document.getElementById("player-el")=playerEl.textContent= player.name+ " : $" + player.chips
+  name: "Alexsander",
+  chips: 145,
+};
+let playerEl = document.getElementById("player-el");
 
 startGame.style.display = "none";
 newCard.style.display = "none";
-
+playerEl.textContent = player.name + " : $" + player.chips;
 function getRandomCard() {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -29,8 +29,8 @@ function getRandomCard() {
 function renderCards() {
   cardsEl.textContent = "Cards: ";
 
-  for (let i = 0; i < cards.length; i++) {
-    cardsEl.textContent += cards[i] + " ";
+  for (let card of cards) {
+    cardsEl.textContent += card + " ";
   }
 }
 
