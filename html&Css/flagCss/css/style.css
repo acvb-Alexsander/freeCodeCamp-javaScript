@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.red {
+    background: #c71226;
+    height: 100px;
+}
+
+.blue {
+    margin: 25px 0;
+    background: #0d1b88;
+    height: 100px;
+}
+
+.green {
+    background: #397327;
+    height: 100px;
+}
