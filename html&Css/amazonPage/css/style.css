@@ -1,0 +1,264 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: papayawhip;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    background-color: #131921;
+    display: flex;
+}
+
+.logo{
+    width: 180px;
+    height: auto;
+}
+
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.nav-wrapper ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+
+.nav-wrapper a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800px;
+}
+
+.nav-wrapper input{
+    
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 15px;
+}
+
+.to-the-left{
+    display: flex;
+    justify-content: end;
+}
+
+.nav-header{
+    background:#232f3e ;
+    padding: 10px;
+}
+
+.nav-header ul{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-header li:hover{
+    border: 2px solid white;
+    line-height: 100%;
+}
+
+.nav-header a{
+    text-decoration: none;
+    color: papayawhip;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* ================= MAIN ================= */
+
+
+main {
+    width: min(95%, 1500px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* Todas as seções */
+
+.outdoor,
+.ofertas-do-dia,
+.dia-de-jogo,
+.oferta-roupas {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+    transition: .3s;
+}
+
+.outdoor:hover,
+.ofertas-do-dia:hover,
+.dia-de-jogo:hover,
+.oferta-roupas:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+}
+
+/* ================= BANNER ================= */
+
+.outdoor {
+    overflow: hidden;
+    position: relative;
+}
+
+.outdoor img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 500px;
+}
+
+.banner-texto h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.banner-texto p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.banner-texto button {
+    background: #ff9900;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.banner-texto button:hover {
+    background: #e67e00;
+}
+
+/* ================= TÍTULOS ================= */
+
+main h2 {
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #222;
+}
+
+/* ================= CARDS ================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .3s;
+    cursor: pointer;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px;
+    font-size: 20px;
+}
+
+.card p {
+    margin: 0 15px 15px;
+}
+
+.preco-antigo {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.preco {
+    color: #B12704;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ================= DIA DE JOGO ================= */
+
+.dia-de-jogo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.dia-de-jogo img {
+    width: 45%;
+    border-radius: 15px;
+}
+
+.dia-de-jogo .texto {
+    flex: 1;
+}
+
+.dia-de-jogo h2 {
+    font-size: 2.5rem;
+}
+
+.dia-de-jogo p {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ================= BOTÕES ================= */
+
+button {
+    background: #ff9900;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+button:hover {
+    background: #e67e00;
+    transform: scale(1.05);
+}
