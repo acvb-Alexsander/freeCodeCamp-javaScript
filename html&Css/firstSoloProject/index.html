@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Z Fighters</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="img/zFighters.png" width="180" alt="Logo Z Fighters" />
+
+      <nav>
+        <ul>
+          <li><a onclick="trocarPersonagem('goku')" alt="goku">Goku</a></li>
+
+          <li><a onclick="trocarPersonagem('vegeta')">Vegeta</a></li>
+
+          <li><a onclick="trocarPersonagem('gohan')">Gohan</a></li>
+
+          <li><a onclick="trocarPersonagem('piccolo')">Piccolo</a></li>
+
+          <li><a onclick="trocarPersonagem('broly')">Broly</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="card">
+        <img id="imagem" src="img/goku.webp" />
+
+        <div class="info">
+          <h1 id="nome">Goku</h1>
+
+          <p id="descricao">
+            O Saiyajin criado na Terra e defensor do universo.
+          </p>
+
+          <h3>Poder</h3>
+
+          <div class="barra">
+            <div id="power"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="feitos">
+          <h2>Principais Feitos</h2>
+
+          <ul id="lista-feitos">
+            <li>Derrotou Freeza em Namekusei</li>
+            <li>Primeiro Super Saiyajin da nova geração</li>
+            <li>Derrotou Kid Boo</li>
+            <li>Salvou o Universo diversas vezes</li>
+            <li>Dominou o Ultra Instinct</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Feito por
+        <a href="https://github.com/acvb-Alexsander" target="_blank"
+          >@Alexsander Campos Vilas Boas</a
+        >
+      </p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

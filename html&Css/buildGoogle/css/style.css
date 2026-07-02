@@ -1,5 +1,6 @@
 .main{
     margin-top: 100px;
+    
 }
 
 .googleLabel{ 
@@ -14,10 +15,34 @@
     
     display: block;
     width: 400px;
+    margin: 1rem auto;
     line-height: 24px;
     padding: 10px 30px;
     border: 1px solid #dfe1e5;
     border-radius: 24px;
-    margin: 1rem auto;
     
+    
+}
+
+.btn-wrapper{
+    
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.btn{
+    
+    
+    line-height: 24px;
+    padding: 10px 30px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    background-color: #f8f9fa;
+    
+}
+
+p{
+    text-align: center;
 }
