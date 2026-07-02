@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: #82a5ca;
+    
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#logo{
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    height: 150px;
+    
+}
+
+h1{
+    text-shadow: 0px 0px 10px black;
+}
+
+#hero{
+    background-size: cover;
+    background-image: url("../img/space.gif");
+    padding: 300px;
+    
+}
+
+.btn{
+    background: rgb(246, 246, 252);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: inherit;
+    color: #82a5ca;
+    margin: 1rem 0;
+}
+
+.cta{
+    text-decoration: underline;
+}
