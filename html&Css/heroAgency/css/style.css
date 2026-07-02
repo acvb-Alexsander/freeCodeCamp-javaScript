@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+     background: url("../img/woman-surfer-with-surfboard-ocean-sunset.jpg") center / cover no-repeat;
+    
+}
+
+header{
+    background: #202e31;
+    display: flex;
+    align-items: center;
+}
+
+#hero{
+    display: flex;
+}
+
+#logo{
+    width: 100px;
+}
+
+#title{
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    font-weight: 800;
+  
+}
+
+.nav-wrapper {
+    margin-left: auto;
+}
+
+.nav-wrapper ul{
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    right: 1;
+}
+
+.nav-wrapper li{
+    list-style: none;
+}
+
+.nav-wrapper a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+
+
+.card{
+    padding: 10px 50px;
+    background: #1f3333af;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 600px;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    position: fixed;
+    left: 15%;
+}
+
+.travel-article{
+    font-size: 6rem;
+    color: #85a8b7;
+}
+
+h2{
+    font-size: 6rem;
+    color: #fbfffd;
+    margin-bottom: 25px;
+}
+
+p{
+    color: #fbfffd;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+button{
+    margin: 2rem 0;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+
+}
+
+.card-login{
+    padding: 10px 50px;
+    background: #1f3333ef;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 600px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    
+    position: absolute;
+    right: 50px; /* distância da direita */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.subtitulo{
+    font-size: 3rem;
+}
+
+.card-content{
+    font-size: 2rem;
+    color: #fbfffd;
+    margin-bottom: 15px;
+}
+
+.card-content input{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    width: 80%;
+}
+
+.border-p{
+    border-bottom: 2px solid #fbfffd;
+}
+
+.btn{
+    margin: 2rem auto;
+}
