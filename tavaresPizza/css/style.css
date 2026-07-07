@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --e-global-color-primary: #FFA609;
+    --e-global-color-secondary: #0B0A07;
+    --e-global-color-text: #595959;
+    --e-global-color-background: #B90020;
+    --e-global-color-6cf8799: #FFFFFF;
+    --e-global-color-navbar: #F9F5F2;
+    --e-global-color-5c392cc: #E00025;
+    --e-global-color-daec931: #FFFFFF00;
+    --e-global-color-4ffff97: #ECE0D5;
+    --e-global-color-99a985f: #FFCA09;
+    --e-global-color-e609511: #FFFFFFCF;
+    --e-global-color-e5ea6ab: #A3A3A3;
+    --e-global-color-fe266c8: #FFA609B8;
+}
+
+header{
+    background: var(--e-global-color-background);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#logo{
+    width: 150px;
+}
+
+#nav-wrapper ul{
+    display: flex;
+    gap: 30px;
+    font-size: 1.3rem;
+}
+
+#nav-wrapper li{
+   
+    list-style: none;
+}
+
+#nav-wrapper a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--e-global-color-navbar);
+}
+
+#nav-wrapper a:hover{
+    text-decoration: underline;
+    color: var(--e-global-color-primary);
+}
+
+#pesquisa{
+    padding: 10px 20px;
+    width: 30%;
+    border: none;
+    border-radius: 5px;
+}
+
+#contact-info{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.bola{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: var(--e-global-color-99a985f);
+}
+
+#contact-info img{
+    width: 100px;
+    
+}
+
+#telefone{
+    padding: 15px 15px 15px 0;
+    p{
+        font-weight: bold;
+        color: var(--e-global-color-4ffff97);
+    }
+    h2 a{
+        text-decoration: none;
+        color: var(--e-global-color-fe266c8);
+    }
+}
+
+#telefone:hover{
+    cursor: pointer;   
+}
